@@ -25,8 +25,8 @@ function SliderProduct() {
     router.push(`/store/cat/${slug}`)
   }
   return (
-    <div className='mt-10 p-4'>
-      <h3 className='text-gray-600 text-3xl font-bold mt-5'>محصولات بیشتر</h3>
+    <div className='mt-3 lg:mt-10 p-4'>
+      <h3 className='text-gray-600 text-xl md:text-2xl lg:text-3xl font-bold mt-0 md:mt-5'>محصولات بیشتر</h3>
       <Container>
         <Swiper
           slidesPerView={1}
@@ -55,11 +55,11 @@ function SliderProduct() {
             disableOnInteraction : false
           }}
           modules={[Autoplay , Navigation]}
-          className="mySwiper mt-10 ">
+          className="mySwiper mt-2 lg:mt-10 ">
             {categoresImg.map((item) => {
               return(
                 <SwiperSlide>
-                  <button onClick={()=>handelClick(item.slug)}><img className='rounded-3xl' src={item.img} alt="" /></button>
+                  <button onClick={()=>handelClick(item.slug)}><img className='w-[150px] md:w-[200px] lg:w-full  rounded-2xl' src={item.img} alt="" /></button>
                 </SwiperSlide>
               )
             })}
